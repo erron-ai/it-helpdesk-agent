@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "it-helpdesk-agent"
+version = "0.1.0"
+description = "IT helpdesk automation for password resets, provisioning, onboarding, and ticket routing."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/it-helpdesk-agent"
+Issues = "https://github.com/erron-ai/it-helpdesk-agent/issues"
+
+[project.scripts]
+it-helpdesk-agent = "it_helpdesk_agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
